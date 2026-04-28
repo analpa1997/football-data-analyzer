@@ -16,6 +16,11 @@ const rutas = [
     ruta: '/contacto',
     nombre: 'Contacto',
     componente: () => import('@/vistas/Contacto.vue')
+  },
+  {
+    ruta: '/penaltis',
+    nombre: 'Análisis de Penaltis',
+    componente: () => import('@/vistas/AnalizadorPenaltis.vue')
   }
 ]
 

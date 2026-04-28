@@ -763,20 +763,29 @@ const on_image_click = () => {} // ❌ snake_case
 
 ---
 
-### 🇪🇸 Idioma - Español Obligatorio
+### 🇪🇸 Idioma - Español para Código Propio
 
-**TODO el código, documentación y comentarios DEBE estar en español.**
+**El código PROPIO del proyecto debe estar en español. Mantén en inglés lo que viene de librerías externas o características del lenguaje.**
 
-Esto incluye:
-- **Nombres de variables y funciones** → camelCase en español
-- **Nombres de componentes** → PascalCase en español  
-- **Comentarios en el código** → español
-- **Documentación de props** → español
-- **Textos en templates** → español
-- **Errores y mensajes** → español
-- **Valores mágicos y constantes** → documentados en español
+**Traducir (código tuyo):**
+- ✅ Nombres de variables y funciones propias → camelCase en español
+- ✅ Nombres de componentes propios → PascalCase en español  
+- ✅ Comentarios en el código → español
+- ✅ Documentación de props → español
+- ✅ Textos en templates (UX) → español
+- ✅ Errores y mensajes (UX) → español
+- ✅ Valores mágicos y constantes propias → documentados en español
+- ✅ Tipos e interfaces propias → PascalCase en español
 
-**✅ BIEN - Todo en español:**
+**NO Traducir (viene de afuera):**
+- ❌ Imports de librerías externas: `import { ref, computed } from 'vue'`
+- ❌ Métodos de librerías: `.filter()`, `.map()`, `.forEach()`
+- ❌ Propiedades de APIs externas: `fetch()`, `.json()`
+- ❌ Nombres de eventos estándar: `click`, `submit`, `change`
+- ❌ Atributos HTML estándar: `type`, `placeholder`, `disabled`
+- ❌ Nombres de métodos de objetos globales: `.toLocaleDateString()`, `.includes()`
+
+**✅ BIEN - Equilibrio pragmático:**
 ```typescript
 // composables/useGaleriaDatos.ts
 import { ref, computed } from 'vue'

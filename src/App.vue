@@ -15,6 +15,7 @@ document.documentElement.setAttribute('data-theme', 'light')
 
 const enlaces = [
   { nombre: 'Inicio', ruta: '/' },
+  { nombre: 'Penaltis', ruta: '/penaltis' },
   { nombre: 'Acerca de', ruta: '/acerca-de' },
   { nombre: 'Contacto', ruta: '/contacto' }
 ]

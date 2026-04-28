@@ -1,0 +1,218 @@
+{
+  "metadatos": {
+    "titulo": "Estadísticas de Penaltis - Competiciones Europeas",
+    "descripcion": "Análisis de penaltis en competiciones europeas (2020-2025)",
+    "fechaActualizacion": "2026-04-28",
+    "competiciones": ["Liga", "Copa del Rey", "Supercopa", "Liga de Campeones", "Europa League"]
+  },
+  "penaltis": [
+    {
+      "id": 1,
+      "competicion": "Liga",
+      "temporada": "2024-2025",
+      "equipo": "FC Barcelona",
+      "rival": "Real Madrid",
+      "jugador": "Robert Lewandowski",
+      "resultado": "gol",
+      "minuto": 45,
+      "fecha": "2024-10-15",
+      "tipo": "penal directo",
+      "razon": "falta defensiva"
+    },
+    {
+      "id": 2,
+      "competicion": "Liga",
+      "temporada": "2024-2025",
+      "equipo": "Atlético Madrid",
+      "rival": "Sevilla",
+      "jugador": "Ángel Correa",
+      "resultado": "gol",
+      "minuto": 62,
+      "fecha": "2024-10-16",
+      "tipo": "penal directo",
+      "razon": "mano"
+    },
+    {
+      "id": 3,
+      "competicion": "Liga de Campeones",
+      "temporada": "2024-2025",
+      "equipo": "Manchester City",
+      "rival": "Inter de Milán",
+      "jugador": "Erling Haaland",
+      "resultado": "gol",
+      "minuto": 38,
+      "fecha": "2024-11-05",
+      "tipo": "penal directo",
+      "razon": "falta defensiva"
+    },
+    {
+      "id": 4,
+      "competicion": "Liga",
+      "temporada": "2024-2025",
+      "equipo": "Valencia",
+      "rival": "Getafe",
+      "jugador": "Javi Guerra",
+      "resultado": "parado",
+      "minuto": 71,
+      "fecha": "2024-10-20",
+      "tipo": "penal directo",
+      "razon": "mano"
+    },
+    {
+      "id": 5,
+      "competicion": "Copa del Rey",
+      "temporada": "2024-2025",
+      "equipo": "Real Madrid",
+      "rival": "Celta Vigo",
+      "jugador": "Vinícius Jr",
+      "resultado": "gol",
+      "minuto": 89,
+      "fecha": "2024-10-29",
+      "tipo": "penal directo",
+      "razon": "falta defensiva"
+    },
+    {
+      "id": 6,
+      "competicion": "Liga",
+      "temporada": "2024-2025",
+      "equipo": "Real Sociedad",
+      "rival": "Athletic Club",
+      "jugador": "Mikel Oyarzabal",
+      "resultado": "fuera",
+      "minuto": 55,
+      "fecha": "2024-10-22",
+      "tipo": "penal directo",
+      "razon": "falta defensiva"
+    },
+    {
+      "id": 7,
+      "competicion": "Europa League",
+      "temporada": "2024-2025",
+      "equipo": "Sevilla",
+      "rival": "Juventus",
+      "jugador": "Isaac Romero",
+      "resultado": "gol",
+      "minuto": 44,
+      "fecha": "2024-11-08",
+      "tipo": "penal directo",
+      "razon": "mano"
+    },
+    {
+      "id": 8,
+      "competicion": "Liga",
+      "temporada": "2024-2025",
+      "equipo": "Villarreal",
+      "rival": "Eibar",
+      "jugador": "Gerard Moreno",
+      "resultado": "gol",
+      "minuto": 67,
+      "fecha": "2024-10-25",
+      "tipo": "penal directo",
+      "razon": "falta defensiva"
+    },
+    {
+      "id": 9,
+      "competicion": "Liga de Campeones",
+      "temporada": "2024-2025",
+      "equipo": "Bayern de Múnich",
+      "rival": "PSG",
+      "jugador": "Harry Kane",
+      "resultado": "gol",
+      "minuto": 50,
+      "fecha": "2024-11-12",
+      "tipo": "penal directo",
+      "razon": "falta defensiva"
+    },
+    {
+      "id": 10,
+      "competicion": "Liga",
+      "temporada": "2024-2025",
+      "equipo": "Alavés",
+      "rival": "Las Palmas",
+      "jugador": "Jon Guridi",
+      "resultado": "parado",
+      "minuto": 76,
+      "fecha": "2024-10-19",
+      "tipo": "penal directo",
+      "razon": "mano"
+    },
+    {
+      "id": 11,
+      "competicion": "Supercopa",
+      "temporada": "2024-2025",
+      "equipo": "Real Madrid",
+      "rival": "Barcelona",
+      "jugador": "Rodrygo",
+      "resultado": "gol",
+      "minuto": 101,
+      "fecha": "2025-01-12",
+      "tipo": "penal directo",
+      "razon": "falta defensiva"
+    },
+    {
+      "id": 12,
+      "competicion": "Liga",
+      "temporada": "2024-2025",
+      "equipo": "Osasuna",
+      "rival": "Granada",
+      "jugador": "Ante Budimir",
+      "resultado": "gol",
+      "minuto": 53,
+      "fecha": "2024-10-26",
+      "tipo": "penal directo",
+      "razon": "falta defensiva"
+    }
+  ],
+  "estadisticas": {
+    "totalPenaltis": 12,
+    "golesConvertidos": 9,
+    "paradosAA": 2,
+    "fallidos": 1,
+    "tasaConversion": 75,
+    "tasaParada": 17,
+    "tasaFallo": 8,
+    "porCompeticion": {
+      "Liga": {
+        "total": 7,
+        "golesConvertidos": 5,
+        "parados": 2,
+        "fallidos": 0
+      },
+      "Liga de Campeones": {
+        "total": 2,
+        "golesConvertidos": 2,
+        "parados": 0,
+        "fallidos": 0
+      },
+      "Europa League": {
+        "total": 1,
+        "golesConvertidos": 1,
+        "parados": 0,
+        "fallidos": 0
+      },
+      "Copa del Rey": {
+        "total": 1,
+        "golesConvertidos": 1,
+        "parados": 0,
+        "fallidos": 0
+      },
+      "Supercopa": {
+        "total": 1,
+        "golesConvertidos": 1,
+        "parados": 0,
+        "fallidos": 0
+      }
+    },
+    "razonesComunes": {
+      "falta defensiva": 8,
+      "mano": 4
+    },
+    "equiposConMasPenaltis": [
+      { "equipo": "Real Madrid", "penaltis": 3, "conversion": 100 },
+      { "equipo": "Barcelona", "penaltis": 1, "conversion": 100 },
+      { "equipo": "Manchester City", "penaltis": 1, "conversion": 100 },
+      { "equipo": "Bayern de Múnich", "penaltis": 1, "conversion": 100 },
+      { "equipo": "Atlético Madrid", "penaltis": 1, "conversion": 100 }
+    ]
+  }
+}
