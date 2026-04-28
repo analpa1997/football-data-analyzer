@@ -21,7 +21,7 @@ const rutas = [
 
 const enrutador = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  rutas: rutas.map(r => ({
+  routes: rutas.map(r => ({
     path: r.ruta,
     name: r.nombre,
     component: r.componente
