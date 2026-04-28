@@ -10,17 +10,23 @@
       <div class="grupo-filtro">
         <label>Temporada</label>
         <select v-model="filtroTemporada">
-          <option v-for="t in temporadas" :key="t" :value="t">{{ t }}</option>
+          <option v-for="t in temporadas" :key="t" :value="t">{{ t === 'Todos' ? 'Todas' : t }}</option>
         </select>
       </div>
       <div class="grupo-filtro">
         <label>País</label>
         <select v-model="filtroPais">
-          <option v-for="p in paises" :key="p" :value="p">{{ p }}</option>
+          <option v-for="p in paises" :key="p" :value="p">{{ p === 'Todos' ? 'Todos' : p }}</option>
         </select>
       </div>
       <div class="grupo-filtro">
-        <label>Ordenar</label>
+        <label>Equipo</label>
+        <select v-model="filtroEquipo">
+          <option v-for="e in listaEquipos" :key="e" :value="e">{{ e === 'Todos' ? 'Todos' : e }}</option>
+        </select>
+      </div>
+      <div class="grupo-filtro">
+        <label>Ordenar por</label>
         <select v-model="ordenar">
           <option value="penaltis">Penaltis</option>
           <option value="saldo">Saldo</option>
@@ -49,30 +55,57 @@
       </div>
     </div>
 
-    <!-- Gráficas -->
+    <!-- Gráficas - Fila 1 -->
     <div class="graficas">
       <div class="grafica-contenedor">
-        <h3>Top 10 Equipos por Penaltis</h3>
+        <h3>📊 Top 10 Equipos por Penaltis</h3>
         <canvas id="chartDistribucion"></canvas>
       </div>
       <div class="grafica-contenedor">
-        <h3>Top 5 - Saldo de Penaltis</h3>
+        <h3>📈 Tendencias de Penaltis por Temporada</h3>
+        <canvas id="chartTendencias"></canvas>
+      </div>
+    </div>
+
+    <!-- Gráficas - Fila 2 -->
+    <div class="graficas">
+      <div class="grafica-contenedor">
+        <h3>🎯 Top 5 - Saldo de Penaltis</h3>
         <canvas id="chartSaldo"></canvas>
+      </div>
+      <div class="grafica-contenedor">
+        <h3>🌍 Top 10 Países por Penaltis</h3>
+        <canvas id="chartPaises"></canvas>
       </div>
     </div>
 
     <!-- Tablas -->
     <div class="tablas-container">
       <div class="tabla-seccion">
-        <h3>Distribución por País</h3>
+        <h3>📍 Distribución por País</h3>
         <table class="tabla">
           <thead>
             <tr>
-              <th>País</th>
-              <th>Equipos</th>
-              <th>Penaltis Total</th>
-              <th>Promedio</th>
-              <th>Amarillas</th>
+              <th @click="ordenarPor('pais')" class="sorteable">
+                País 
+                <span v-if="ordenarTabla === 'pais'" class="sort-icon">{{ dirOrden === 'asc' ? '↑' : '↓' }}</span>
+              </th>
+              <th @click="ordenarPor('equipos')" class="sorteable centrado">
+                Equipos
+                <span v-if="ordenarTabla === 'equipos'" class="sort-icon">{{ dirOrden === 'asc' ? '↑' : '↓' }}</span>
+              </th>
+              <th @click="ordenarPor('penaltis')" class="sorteable centrado">
+                Penaltis Total
+                <span v-if="ordenarTabla === 'penaltis'" class="sort-icon">{{ dirOrden === 'asc' ? '↑' : '↓' }}</span>
+              </th>
+              <th @click="ordenarPor('promedio')" class="sorteable centrado">
+                Promedio
+                <span v-if="ordenarTabla === 'promedio'" class="sort-icon">{{ dirOrden === 'asc' ? '↑' : '↓' }}</span>
+              </th>
+              <th @click="ordenarPor('amarillas')" class="sorteable centrado">
+                Amarillas
+                <span v-if="ordenarTabla === 'amarillas'" class="sort-icon">{{ dirOrden === 'asc' ? '↑' : '↓' }}</span>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -88,23 +121,47 @@
       </div>
 
       <div class="tabla-seccion">
-        <h3>Equipos Filtrados ({{ equiposFiltrados.length }})</h3>
+        <h3>⚽ Equipos Filtrados ({{ equiposOrdenados.length }})</h3>
         <div class="tabla-scroll">
           <table class="tabla">
             <thead>
               <tr>
-                <th>Equipo</th>
-                <th>País</th>
-                <th>Año</th>
-                <th>Penaltis</th>
-                <th>Contra</th>
-                <th>Saldo</th>
-                <th>Amarillas</th>
-                <th>Rojas</th>
+                <th @click="ordenarPor('equipo')" class="sorteable">
+                  Equipo
+                  <span v-if="ordenarTabla === 'equipo'" class="sort-icon">{{ dirOrden === 'asc' ? '↑' : '↓' }}</span>
+                </th>
+                <th @click="ordenarPor('pais')" class="sorteable">
+                  País
+                  <span v-if="ordenarTabla === 'pais'" class="sort-icon">{{ dirOrden === 'asc' ? '↑' : '↓' }}</span>
+                </th>
+                <th @click="ordenarPor('temporada')" class="sorteable centrado">
+                  Año
+                  <span v-if="ordenarTabla === 'temporada'" class="sort-icon">{{ dirOrden === 'asc' ? '↑' : '↓' }}</span>
+                </th>
+                <th @click="ordenarPor('aFavor')" class="sorteable centrado">
+                  Favor
+                  <span v-if="ordenarTabla === 'aFavor'" class="sort-icon">{{ dirOrden === 'asc' ? '↑' : '↓' }}</span>
+                </th>
+                <th @click="ordenarPor('enContra')" class="sorteable centrado">
+                  Contra
+                  <span v-if="ordenarTabla === 'enContra'" class="sort-icon">{{ dirOrden === 'asc' ? '↑' : '↓' }}</span>
+                </th>
+                <th @click="ordenarPor('saldo')" class="sorteable centrado">
+                  Saldo
+                  <span v-if="ordenarTabla === 'saldo'" class="sort-icon">{{ dirOrden === 'asc' ? '↑' : '↓' }}</span>
+                </th>
+                <th @click="ordenarPor('amarillas')" class="sorteable centrado">
+                  Amarillas
+                  <span v-if="ordenarTabla === 'amarillas'" class="sort-icon">{{ dirOrden === 'asc' ? '↑' : '↓' }}</span>
+                </th>
+                <th @click="ordenarPor('rojas')" class="sorteable centrado">
+                  Rojas
+                  <span v-if="ordenarTabla === 'rojas'" class="sort-icon">{{ dirOrden === 'asc' ? '↑' : '↓' }}</span>
+                </th>
               </tr>
             </thead>
             <tbody>
-              <tr v-for="eq in equiposFiltrados" :key="eq.id">
+              <tr v-for="eq in equiposOrdenados" :key="eq.id">
                 <td class="equipo">{{ eq.equipo }}</td>
                 <td>{{ eq.nombrePais }}</td>
                 <td class="centrado">{{ eq.temporada }}</td>
@@ -125,28 +182,37 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, watch } from 'vue'
 import { usePenaltisEuropa } from '@/composables/usePenaltisEuropa'
 import Chart from 'chart.js/auto'
 
 const {
-  equiposFiltrados,
+  equiposOrdenados,
   metadatos,
   estadisticas,
   temporadas,
   paises,
+  listaEquipos,
   filtroTemporada,
   filtroPais,
+  filtroEquipo,
   ordenar,
+  ordenarTabla,
+  dirOrden,
   datosGraficaDistribucion,
   datosGraficaSaldo,
-  distribucionPaises
+  datosGraficaTendencias,
+  datosGraficaPaises,
+  distribucionPaises,
+  ordenarPor
 } = usePenaltisEuropa()
 
 let chartDistribucion: Chart
 let chartSaldo: Chart
+let chartTendencias: Chart
+let chartPaises: Chart
 
-onMounted(() => {
+const actualizarGraficas = () => {
   // Gráfica de distribución
   const ctxDist = document.getElementById('chartDistribucion') as HTMLCanvasElement
   if (chartDistribucion) chartDistribucion.destroy()
@@ -167,6 +233,24 @@ onMounted(() => {
     }
   })
 
+  // Gráfica de tendencias
+  const ctxTendencias = document.getElementById('chartTendencias') as HTMLCanvasElement
+  if (chartTendencias) chartTendencias.destroy()
+  chartTendencias = new Chart(ctxTendencias, {
+    type: 'line',
+    data: datosGraficaTendencias.value,
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: { position: 'top' }
+      },
+      scales: {
+        y: { beginAtZero: true }
+      }
+    }
+  })
+
   // Gráfica de saldo
   const ctxSaldo = document.getElementById('chartSaldo') as HTMLCanvasElement
   if (chartSaldo) chartSaldo.destroy()
@@ -181,13 +265,36 @@ onMounted(() => {
       plugins: { legend: { display: false } }
     }
   })
+
+  // Gráfica de países
+  const ctxPaises = document.getElementById('chartPaises') as HTMLCanvasElement
+  if (chartPaises) chartPaises.destroy()
+  chartPaises = new Chart(ctxPaises, {
+    type: 'bar',
+    data: datosGraficaPaises.value,
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      indexAxis: 'y',
+      scales: { x: { beginAtZero: true } },
+      plugins: { legend: { display: false } }
+    }
+  })
+}
+
+onMounted(() => {
+  actualizarGraficas()
+})
+
+// Actualizar gráficas cuando cambian los filtros
+watch([filtroTemporada, filtroPais, filtroEquipo], () => {
+  actualizarGraficas()
 })
 </script>
 
 <style scoped>
 .analizador {
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
   padding: 2rem;
   background: var(--color-primary);
   color: var(--color-text);
@@ -217,7 +324,7 @@ onMounted(() => {
   gap: 1rem;
   margin-bottom: 2rem;
   background: rgba(79, 70, 229, 0.1);
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid rgba(79, 70, 229, 0.3);
 }
@@ -242,6 +349,12 @@ onMounted(() => {
   color: var(--color-text);
   cursor: pointer;
   font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.grupo-filtro select:hover {
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.1);
 }
 
 /* Stats */
@@ -258,6 +371,12 @@ onMounted(() => {
   border: 2px solid rgba(79, 70, 229, 0.3);
   border-radius: 8px;
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-secondary);
 }
 
 .stat-value {
@@ -287,7 +406,7 @@ onMounted(() => {
 /* Gráficas */
 .graficas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -297,6 +416,12 @@ onMounted(() => {
   border: 1px solid rgba(79, 70, 229, 0.2);
   border-radius: 8px;
   padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.grafica-contenedor:hover {
+  border-color: var(--color-secondary);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
 }
 
 .grafica-contenedor h3 {
@@ -308,8 +433,9 @@ onMounted(() => {
 /* Tablas */
 .tablas-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .tabla-seccion {
@@ -317,6 +443,12 @@ onMounted(() => {
   border: 1px solid rgba(79, 70, 229, 0.2);
   border-radius: 8px;
   padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.tabla-seccion:hover {
+  border-color: var(--color-secondary);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
 }
 
 .tabla-seccion h3 {
@@ -341,6 +473,22 @@ onMounted(() => {
   padding: 0.75rem;
   text-align: left;
   font-weight: 600;
+  user-select: none;
+}
+
+.tabla th.sorteable {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tabla th.sorteable:hover {
+  background: rgba(79, 70, 229, 0.9);
+  text-decoration: underline;
+}
+
+.sort-icon {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
 }
 
 .tabla td {
@@ -406,6 +554,35 @@ onMounted(() => {
 
   .stats {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filtros {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .analizador {
+    padding: 0.5rem;
+  }
+
+  .header h1 {
+    font-size: 1.3rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .filtros {
+    grid-template-columns: 1fr;
+  }
+
+  .tabla th,
+  .tabla td {
+    padding: 0.25rem;
+    font-size: 0.7rem;
   }
 }
 </style>
