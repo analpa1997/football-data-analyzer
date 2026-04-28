@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import Encabezado from './components/layout/Encabezado.vue'
+import Pie from './components/layout/Pie.vue'
 
 const isDarkMode = ref(false)
 
@@ -11,90 +12,48 @@ const toggleDarkMode = () => {
 
 // Set initial theme
 document.documentElement.setAttribute('data-theme', 'light')
+
+const enlaces = [
+  { nombre: 'Inicio', ruta: '/' },
+  { nombre: 'Acerca de', ruta: '/acerca-de' },
+  { nombre: 'Contacto', ruta: '/contacto' }
+]
 </script>
 
 <template>
-  <div class="app-container">
-    <div class="theme-toggle">
-      <label class="switch">
-        <input type="checkbox" @change="toggleDarkMode" :checked="isDarkMode">
-        <span class="slider"></span>
-      </label>
-      <span class="theme-label">{{ isDarkMode ? 'Modo Oscuro' : 'Modo Claro' }}</span>
-    </div>
-    <HelloWorld />
+  <div class="aplicacion">
+    <Encabezado 
+      :es-modo-oscuro="isDarkMode"
+      :enlaces="enlaces"
+      @toggle-tema="toggleDarkMode"
+    />
+
+    <main class="contenido-principal">
+      <RouterView />
+    </main>
+
+    <Pie />
   </div>
 </template>
 
-<style scoped>
-.app-container {
+<style>
+#app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-text);
   transition: background-color 0.3s ease, color 0.3s ease;
-  background-color: var(--color-primary);
-  color: var(--color-text);
-  gap: 2rem;
 }
 
-.theme-toggle {
+.aplicacion {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: -10rem;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.theme-label {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--color-text);
-}
-
-/* Toggle Switch Styles */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--color-secondary);
-  transition: 0.3s;
-  border-radius: 34px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: var(--color-primary);
-  transition: 0.3s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: var(--color-accent);
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
+.contenido-principal {
+  flex: 1;
+  width: 100%;
 }
 </style>
