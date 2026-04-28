@@ -1,0 +1,1445 @@
+{
+  "metadatos": {
+    "titulo": "Estadísticas de Penaltis - Ligas Europeas",
+    "descripcion": "Datos de penaltis por equipo, país y temporada",
+    "totalRegistros": 30002,
+    "temporadas": [
+      1929,
+      1930,
+      1931,
+      1932,
+      1933,
+      1934,
+      1935,
+      1936,
+      1937,
+      1938,
+      1939,
+      1940,
+      1941,
+      1942,
+      1943,
+      1944,
+      1945,
+      1946,
+      1947,
+      1948,
+      1949,
+      1950,
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      null
+    ],
+    "paises": [
+      "",
+      "Albania",
+      "Alemania",
+      "Andorra",
+      "Armenia",
+      "Austria",
+      "Azerbaijan",
+      "Bielorrusia",
+      "Bosnia",
+      "Bulgaria",
+      "Bélgica",
+      "Chipre",
+      "Croacia",
+      "Dinamarca",
+      "Escocia",
+      "Eslovaquia",
+      "Eslovenia",
+      "España",
+      "Estonia",
+      "Finlandia",
+      "Francia",
+      "Gales",
+      "Georgia",
+      "Gibraltar",
+      "Grecia",
+      "Holanda",
+      "Hungría",
+      "Inglaterra",
+      "Irlanda del Norte",
+      "Islandia",
+      "Islas Feroe",
+      "Israel",
+      "Italia",
+      "Kazajistan",
+      "Kosovo",
+      "Letonia",
+      "Lituania",
+      "Luxemburgo",
+      "Macedonia",
+      "Malta",
+      "Moldavia",
+      "Montenegro",
+      "Noruega",
+      "Polonia",
+      "Portugal",
+      "Rep Checa",
+      "Rep Irlanda",
+      "Rumanía",
+      "Rusia",
+      "San Marino",
+      "Serbia",
+      "Suecia",
+      "Suiza",
+      "Turquía",
+      "Ucrania"
+    ],
+    "estadisticasGenerales": {
+      "totalPenaltisAFavor": null,
+      "totalPenaltisEnContra": null,
+      "totalAmarillas": null,
+      "totalRojas": null
+    }
+  },
+  "resumen": {
+    "porTemporada": {
+      "1929": {
+        "totalEquipos": 10,
+        "totalPenaltisAFavor": 30,
+        "totalPenaltisEnContra": 30,
+        "totalAmarillas": 0,
+        "totalRojas": 10
+      },
+      "1930": {
+        "totalEquipos": 28,
+        "totalPenaltisAFavor": 84,
+        "totalPenaltisEnContra": 84,
+        "totalAmarillas": 0,
+        "totalRojas": 100
+      },
+      "1931": {
+        "totalEquipos": 28,
+        "totalPenaltisAFavor": 81,
+        "totalPenaltisEnContra": 81,
+        "totalAmarillas": 0,
+        "totalRojas": 92
+      },
+      "1932": {
+        "totalEquipos": 28,
+        "totalPenaltisAFavor": 84,
+        "totalPenaltisEnContra": 84,
+        "totalAmarillas": 0,
+        "totalRojas": 104
+      },
+      "1933": {
+        "totalEquipos": 28,
+        "totalPenaltisAFavor": 113,
+        "totalPenaltisEnContra": 113,
+        "totalAmarillas": 0,
+        "totalRojas": 144
+      },
+      "1934": {
+        "totalEquipos": 28,
+        "totalPenaltisAFavor": 88,
+        "totalPenaltisEnContra": 88,
+        "totalAmarillas": 0,
+        "totalRojas": 80
+      },
+      "1935": {
+        "totalEquipos": 28,
+        "totalPenaltisAFavor": 78,
+        "totalPenaltisEnContra": 78,
+        "totalAmarillas": 0,
+        "totalRojas": 94
+      },
+      "1936": {
+        "totalEquipos": 28,
+        "totalPenaltisAFavor": 70,
+        "totalPenaltisEnContra": 70,
+        "totalAmarillas": 0,
+        "totalRojas": 68
+      },
+      "1937": {
+        "totalEquipos": 16,
+        "totalPenaltisAFavor": 48,
+        "totalPenaltisEnContra": 48,
+        "totalAmarillas": 0,
+        "totalRojas": 76
+      },
+      "1938": {
+        "totalEquipos": 16,
+        "totalPenaltisAFavor": 41,
+        "totalPenaltisEnContra": 41,
+        "totalAmarillas": 0,
+        "totalRojas": 110
+      },
+      "1939": {
+        "totalEquipos": 16,
+        "totalPenaltisAFavor": 51,
+        "totalPenaltisEnContra": 51,
+        "totalAmarillas": 0,
+        "totalRojas": 80
+      },
+      "1940": {
+        "totalEquipos": 28,
+        "totalPenaltisAFavor": 82,
+        "totalPenaltisEnContra": 82,
+        "totalAmarillas": 0,
+        "totalRojas": 126
+      },
+      "1941": {
+        "totalEquipos": 28,
+        "totalPenaltisAFavor": 109,
+        "totalPenaltisEnContra": 109,
+        "totalAmarillas": 0,
+        "totalRojas": 90
+      },
+      "1942": {
+        "totalEquipos": 30,
+        "totalPenaltisAFavor": 91,
+        "totalPenaltisEnContra": 91,
+        "totalAmarillas": 0,
+        "totalRojas": 116
+      },
+      "1943": {
+        "totalEquipos": 30,
+        "totalPenaltisAFavor": 105,
+        "totalPenaltisEnContra": 105,
+        "totalAmarillas": 0,
+        "totalRojas": 90
+      },
+      "1944": {
+        "totalEquipos": 14,
+        "totalPenaltisAFavor": 34,
+        "totalPenaltisEnContra": 34,
+        "totalAmarillas": 0,
+        "totalRojas": 6
+      },
+      "1945": {
+        "totalEquipos": 14,
+        "totalPenaltisAFavor": 45,
+        "totalPenaltisEnContra": 45,
+        "totalAmarillas": 0,
+        "totalRojas": 6
+      },
+      "1946": {
+        "totalEquipos": 14,
+        "totalPenaltisAFavor": 33,
+        "totalPenaltisEnContra": 33,
+        "totalAmarillas": 0,
+        "totalRojas": 8
+      },
+      "1947": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 119,
+        "totalPenaltisEnContra": 119,
+        "totalAmarillas": 0,
+        "totalRojas": 132
+      },
+      "1948": {
+        "totalEquipos": 35,
+        "totalPenaltisAFavor": 126,
+        "totalPenaltisEnContra": 126,
+        "totalAmarillas": 0,
+        "totalRojas": 126
+      },
+      "1949": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 141,
+        "totalPenaltisEnContra": 141,
+        "totalAmarillas": 0,
+        "totalRojas": 142
+      },
+      "1950": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 203,
+        "totalPenaltisEnContra": 203,
+        "totalAmarillas": 0,
+        "totalRojas": 120
+      },
+      "1951": {
+        "totalEquipos": 36,
+        "totalPenaltisAFavor": 222,
+        "totalPenaltisEnContra": 222,
+        "totalAmarillas": 0,
+        "totalRojas": 102
+      },
+      "1952": {
+        "totalEquipos": 36,
+        "totalPenaltisAFavor": 189,
+        "totalPenaltisEnContra": 189,
+        "totalAmarillas": 0,
+        "totalRojas": 120
+      },
+      "1953": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 147,
+        "totalPenaltisEnContra": 147,
+        "totalAmarillas": 0,
+        "totalRojas": 118
+      },
+      "1954": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 143,
+        "totalPenaltisEnContra": 143,
+        "totalAmarillas": 0,
+        "totalRojas": 114
+      },
+      "1955": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 128,
+        "totalPenaltisEnContra": 128,
+        "totalAmarillas": 0,
+        "totalRojas": 70
+      },
+      "1956": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 133,
+        "totalPenaltisEnContra": 133,
+        "totalAmarillas": 0,
+        "totalRojas": 88
+      },
+      "1957": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 135,
+        "totalPenaltisEnContra": 135,
+        "totalAmarillas": 0,
+        "totalRojas": 86
+      },
+      "1958": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 146,
+        "totalPenaltisEnContra": 146,
+        "totalAmarillas": 0,
+        "totalRojas": 94
+      },
+      "1959": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 144,
+        "totalPenaltisEnContra": 144,
+        "totalAmarillas": 0,
+        "totalRojas": 118
+      },
+      "1960": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 110,
+        "totalPenaltisEnContra": 110,
+        "totalAmarillas": 0,
+        "totalRojas": 108
+      },
+      "1961": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 130,
+        "totalPenaltisEnContra": 130,
+        "totalAmarillas": 0,
+        "totalRojas": 156
+      },
+      "1962": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 142,
+        "totalPenaltisEnContra": 142,
+        "totalAmarillas": 0,
+        "totalRojas": 102
+      },
+      "1963": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 121,
+        "totalPenaltisEnContra": 121,
+        "totalAmarillas": 0,
+        "totalRojas": 94
+      },
+      "1964": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 92,
+        "totalPenaltisEnContra": 92,
+        "totalAmarillas": 0,
+        "totalRojas": 118
+      },
+      "1965": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 98,
+        "totalPenaltisEnContra": 98,
+        "totalAmarillas": 0,
+        "totalRojas": 106
+      },
+      "1966": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 109,
+        "totalPenaltisEnContra": 109,
+        "totalAmarillas": 0,
+        "totalRojas": 108
+      },
+      "1967": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 105,
+        "totalPenaltisEnContra": 105,
+        "totalAmarillas": 0,
+        "totalRojas": 98
+      },
+      "1968": {
+        "totalEquipos": 32,
+        "totalPenaltisAFavor": 98,
+        "totalPenaltisEnContra": 98,
+        "totalAmarillas": 0,
+        "totalRojas": 94
+      },
+      "1969": {
+        "totalEquipos": 32,
+        "totalPenaltisAFavor": 94,
+        "totalPenaltisEnContra": 94,
+        "totalAmarillas": 282,
+        "totalRojas": 94
+      },
+      "1970": {
+        "totalEquipos": 32,
+        "totalPenaltisAFavor": 103,
+        "totalPenaltisEnContra": 103,
+        "totalAmarillas": 0,
+        "totalRojas": 134
+      },
+      "1971": {
+        "totalEquipos": 32,
+        "totalPenaltisAFavor": 110,
+        "totalPenaltisEnContra": 110,
+        "totalAmarillas": 38,
+        "totalRojas": 108
+      },
+      "1972": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 125,
+        "totalPenaltisEnContra": 125,
+        "totalAmarillas": 402,
+        "totalRojas": 98
+      },
+      "1973": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 124,
+        "totalPenaltisEnContra": 124,
+        "totalAmarillas": 486,
+        "totalRojas": 100
+      },
+      "1974": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 172,
+        "totalPenaltisEnContra": 172,
+        "totalAmarillas": 774,
+        "totalRojas": 130
+      },
+      "1975": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 150,
+        "totalPenaltisEnContra": 150,
+        "totalAmarillas": 1026,
+        "totalRojas": 164
+      },
+      "1976": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 144,
+        "totalPenaltisEnContra": 144,
+        "totalAmarillas": 1120,
+        "totalRojas": 108
+      },
+      "1977": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 171,
+        "totalPenaltisEnContra": 171,
+        "totalAmarillas": 1394,
+        "totalRojas": 128
+      },
+      "1978": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 199,
+        "totalPenaltisEnContra": 199,
+        "totalAmarillas": 1270,
+        "totalRojas": 148
+      },
+      "1979": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 180,
+        "totalPenaltisEnContra": 180,
+        "totalAmarillas": 1178,
+        "totalRojas": 156
+      },
+      "1980": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 166,
+        "totalPenaltisEnContra": 166,
+        "totalAmarillas": 1246,
+        "totalRojas": 180
+      },
+      "1981": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 186,
+        "totalPenaltisEnContra": 186,
+        "totalAmarillas": 1344,
+        "totalRojas": 200
+      },
+      "1982": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 172,
+        "totalPenaltisEnContra": 172,
+        "totalAmarillas": 1220,
+        "totalRojas": 158
+      },
+      "1983": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 166,
+        "totalPenaltisEnContra": 166,
+        "totalAmarillas": 1390,
+        "totalRojas": 182
+      },
+      "1984": {
+        "totalEquipos": 34,
+        "totalPenaltisAFavor": 157,
+        "totalPenaltisEnContra": 157,
+        "totalAmarillas": 1574,
+        "totalRojas": 156
+      },
+      "1985": {
+        "totalEquipos": 56,
+        "totalPenaltisAFavor": 212,
+        "totalPenaltisEnContra": 212,
+        "totalAmarillas": 1660,
+        "totalRojas": 168
+      },
+      "1986": {
+        "totalEquipos": 56,
+        "totalPenaltisAFavor": 209,
+        "totalPenaltisEnContra": 209,
+        "totalAmarillas": 1794,
+        "totalRojas": 218
+      },
+      "1987": {
+        "totalEquipos": 56,
+        "totalPenaltisAFavor": 231,
+        "totalPenaltisEnContra": 231,
+        "totalAmarillas": 2162,
+        "totalRojas": 216
+      },
+      "1988": {
+        "totalEquipos": 57,
+        "totalPenaltisAFavor": 234,
+        "totalPenaltisEnContra": 234,
+        "totalAmarillas": 3252,
+        "totalRojas": 200
+      },
+      "1989": {
+        "totalEquipos": 58,
+        "totalPenaltisAFavor": 234,
+        "totalPenaltisEnContra": 230,
+        "totalAmarillas": 4086,
+        "totalRojas": 320
+      },
+      "1990": {
+        "totalEquipos": 58,
+        "totalPenaltisAFavor": 259,
+        "totalPenaltisEnContra": 259,
+        "totalAmarillas": 4660,
+        "totalRojas": 360
+      },
+      "1991": {
+        "totalEquipos": 58,
+        "totalPenaltisAFavor": 257,
+        "totalPenaltisEnContra": 257,
+        "totalAmarillas": 5126,
+        "totalRojas": 390
+      },
+      "1992": {
+        "totalEquipos": 60,
+        "totalPenaltisAFavor": 270,
+        "totalPenaltisEnContra": 270,
+        "totalAmarillas": 5124,
+        "totalRojas": 466
+      },
+      "1993": {
+        "totalEquipos": 60,
+        "totalPenaltisAFavor": 269,
+        "totalPenaltisEnContra": 269,
+        "totalAmarillas": 7086,
+        "totalRojas": 614
+      },
+      "1994": {
+        "totalEquipos": 78,
+        "totalPenaltisAFavor": 366,
+        "totalPenaltisEnContra": 366,
+        "totalAmarillas": 9258,
+        "totalRojas": 844
+      },
+      "1995": {
+        "totalEquipos": 78,
+        "totalPenaltisAFavor": 339,
+        "totalPenaltisEnContra": 339,
+        "totalAmarillas": 10958,
+        "totalRojas": 902
+      },
+      "1996": {
+        "totalEquipos": 78,
+        "totalPenaltisAFavor": 348,
+        "totalPenaltisEnContra": 348,
+        "totalAmarillas": 12496,
+        "totalRojas": 1014
+      },
+      "1997": {
+        "totalEquipos": 78,
+        "totalPenaltisAFavor": 357,
+        "totalPenaltisEnContra": 357,
+        "totalAmarillas": 12824,
+        "totalRojas": 1010
+      },
+      "1998": {
+        "totalEquipos": 152,
+        "totalPenaltisAFavor": 546,
+        "totalPenaltisEnContra": 546,
+        "totalAmarillas": 16204,
+        "totalRojas": 1275
+      },
+      "1999": {
+        "totalEquipos": 154,
+        "totalPenaltisAFavor": 610,
+        "totalPenaltisEnContra": 610,
+        "totalAmarillas": 17286,
+        "totalRojas": 1406
+      },
+      "2000": {
+        "totalEquipos": 318,
+        "totalPenaltisAFavor": 1188,
+        "totalPenaltisEnContra": 1190,
+        "totalAmarillas": 39074,
+        "totalRojas": 2774
+      },
+      "2001": {
+        "totalEquipos": 318,
+        "totalPenaltisAFavor": 1263,
+        "totalPenaltisEnContra": 1266,
+        "totalAmarillas": 38681,
+        "totalRojas": 2629
+      },
+      "2002": {
+        "totalEquipos": 327,
+        "totalPenaltisAFavor": 1216,
+        "totalPenaltisEnContra": 1218,
+        "totalAmarillas": 38744,
+        "totalRojas": 2683
+      },
+      "2003": {
+        "totalEquipos": 403,
+        "totalPenaltisAFavor": 1435,
+        "totalPenaltisEnContra": 1434,
+        "totalAmarillas": 46003,
+        "totalRojas": 3048
+      },
+      "2004": {
+        "totalEquipos": 412,
+        "totalPenaltisAFavor": 1422,
+        "totalPenaltisEnContra": 1427,
+        "totalAmarillas": 47151,
+        "totalRojas": 3241
+      },
+      "2005": {
+        "totalEquipos": 474,
+        "totalPenaltisAFavor": 1370,
+        "totalPenaltisEnContra": 1372,
+        "totalAmarillas": 51600,
+        "totalRojas": 3146
+      },
+      "2006": {
+        "totalEquipos": 490,
+        "totalPenaltisAFavor": 1633,
+        "totalPenaltisEnContra": 1631,
+        "totalAmarillas": 57305,
+        "totalRojas": 3559
+      },
+      "2007": {
+        "totalEquipos": 492,
+        "totalPenaltisAFavor": 1856,
+        "totalPenaltisEnContra": 1856,
+        "totalAmarillas": 59488,
+        "totalRojas": 3746
+      },
+      "2008": {
+        "totalEquipos": 508,
+        "totalPenaltisAFavor": 1892,
+        "totalPenaltisEnContra": 1892,
+        "totalAmarillas": 64118,
+        "totalRojas": 3870
+      },
+      "2009": {
+        "totalEquipos": 537,
+        "totalPenaltisAFavor": 1971,
+        "totalPenaltisEnContra": 1971,
+        "totalAmarillas": 67113,
+        "totalRojas": 4146
+      },
+      "2010": {
+        "totalEquipos": 661,
+        "totalPenaltisAFavor": 2461,
+        "totalPenaltisEnContra": 2463,
+        "totalAmarillas": 78164,
+        "totalRojas": 5215
+      },
+      "2011": {
+        "totalEquipos": 700,
+        "totalPenaltisAFavor": 2637,
+        "totalPenaltisEnContra": 2637,
+        "totalAmarillas": 82003,
+        "totalRojas": 5016
+      },
+      "2012": {
+        "totalEquipos": 713,
+        "totalPenaltisAFavor": 2621,
+        "totalPenaltisEnContra": 2621,
+        "totalAmarillas": 89836,
+        "totalRojas": 5889
+      },
+      "2013": {
+        "totalEquipos": 712,
+        "totalPenaltisAFavor": 2683,
+        "totalPenaltisEnContra": 2684,
+        "totalAmarillas": 92549,
+        "totalRojas": 5894
+      },
+      "2014": {
+        "totalEquipos": 707,
+        "totalPenaltisAFavor": 2760,
+        "totalPenaltisEnContra": 2758,
+        "totalAmarillas": 87135,
+        "totalRojas": 5552
+      },
+      "2015": {
+        "totalEquipos": 707,
+        "totalPenaltisAFavor": 2544,
+        "totalPenaltisEnContra": 2547,
+        "totalAmarillas": 88579,
+        "totalRojas": 5296
+      },
+      "2016": {
+        "totalEquipos": 701,
+        "totalPenaltisAFavor": 2793,
+        "totalPenaltisEnContra": 2793,
+        "totalAmarillas": 88559,
+        "totalRojas": 5180
+      },
+      "2017": {
+        "totalEquipos": 699,
+        "totalPenaltisAFavor": 3050,
+        "totalPenaltisEnContra": 3048,
+        "totalAmarillas": 86495,
+        "totalRojas": 4611
+      },
+      "2018": {
+        "totalEquipos": 707,
+        "totalPenaltisAFavor": 2981,
+        "totalPenaltisEnContra": 2981,
+        "totalAmarillas": 87021,
+        "totalRojas": 4319
+      },
+      "2019": {
+        "totalEquipos": 711,
+        "totalPenaltisAFavor": 3381,
+        "totalPenaltisEnContra": 3381,
+        "totalAmarillas": 88402,
+        "totalRojas": 4540
+      },
+      "2020": {
+        "totalEquipos": 712,
+        "totalPenaltisAFavor": 3380,
+        "totalPenaltisEnContra": 3380,
+        "totalAmarillas": 85486,
+        "totalRojas": 4465
+      },
+      "2021": {
+        "totalEquipos": 736,
+        "totalPenaltisAFavor": 4084,
+        "totalPenaltisEnContra": 4083,
+        "totalAmarillas": 91877,
+        "totalRojas": 4704
+      },
+      "2022": {
+        "totalEquipos": 726,
+        "totalPenaltisAFavor": 3103,
+        "totalPenaltisEnContra": 3103,
+        "totalAmarillas": 91011,
+        "totalRojas": 4750
+      },
+      "2023": {
+        "totalEquipos": 570,
+        "totalPenaltisAFavor": 975,
+        "totalPenaltisEnContra": 975,
+        "totalAmarillas": 25320,
+        "totalRojas": 1460
+      },
+      "NaN": {
+        "totalEquipos": 13123,
+        "totalPenaltisAFavor": null,
+        "totalPenaltisEnContra": null,
+        "totalAmarillas": null,
+        "totalRojas": null
+      }
+    },
+    "porPais": {
+      "Inglaterra": {
+        "totalEquipos": 795,
+        "totalPenaltisAFavor": 2847,
+        "promedioPenaltis": 3.58
+      },
+      "España": {
+        "totalEquipos": 1582,
+        "totalPenaltisAFavor": 7420,
+        "promedioPenaltis": 4.69
+      },
+      "Italia": {
+        "totalEquipos": 1629,
+        "totalPenaltisAFavor": 8093,
+        "promedioPenaltis": 4.97
+      },
+      "Alemania": {
+        "totalEquipos": 468,
+        "totalPenaltisAFavor": 2044,
+        "promedioPenaltis": 4.37
+      },
+      "Francia": {
+        "totalEquipos": 510,
+        "totalPenaltisAFavor": 2079,
+        "promedioPenaltis": 4.08
+      },
+      "Portugal": {
+        "totalEquipos": 524,
+        "totalPenaltisAFavor": 2139,
+        "promedioPenaltis": 4.08
+      },
+      "Holanda": {
+        "totalEquipos": 432,
+        "totalPenaltisAFavor": 1795,
+        "promedioPenaltis": 4.16
+      },
+      "Rusia": {
+        "totalEquipos": 384,
+        "totalPenaltisAFavor": 1839,
+        "promedioPenaltis": 4.79
+      },
+      "Bélgica": {
+        "totalEquipos": 409,
+        "totalPenaltisAFavor": 1869,
+        "promedioPenaltis": 4.57
+      },
+      "Austria": {
+        "totalEquipos": 250,
+        "totalPenaltisAFavor": 953,
+        "promedioPenaltis": 3.81
+      },
+      "Escocia": {
+        "totalEquipos": 286,
+        "totalPenaltisAFavor": 1293,
+        "promedioPenaltis": 4.52
+      },
+      "Ucrania": {
+        "totalEquipos": 266,
+        "totalPenaltisAFavor": 1048,
+        "promedioPenaltis": 3.94
+      },
+      "Turquía": {
+        "totalEquipos": 438,
+        "totalPenaltisAFavor": 1912,
+        "promedioPenaltis": 4.37
+      },
+      "Dinamarca": {
+        "totalEquipos": 320,
+        "totalPenaltisAFavor": 1090,
+        "promedioPenaltis": 3.41
+      },
+      "Chipre": {
+        "totalEquipos": 188,
+        "totalPenaltisAFavor": 799,
+        "promedioPenaltis": 4.25
+      },
+      "Serbia": {
+        "totalEquipos": 296,
+        "totalPenaltisAFavor": 1153,
+        "promedioPenaltis": 3.9
+      },
+      "Suiza": {
+        "totalEquipos": 248,
+        "totalPenaltisAFavor": 1190,
+        "promedioPenaltis": 4.8
+      },
+      "Rep Checa": {
+        "totalEquipos": 386,
+        "totalPenaltisAFavor": 1156,
+        "promedioPenaltis": 2.99
+      },
+      "Croacia": {
+        "totalEquipos": 244,
+        "totalPenaltisAFavor": 1205,
+        "promedioPenaltis": 4.94
+      },
+      "Grecia": {
+        "totalEquipos": 380,
+        "totalPenaltisAFavor": 1547,
+        "promedioPenaltis": 4.07
+      },
+      "Israel": {
+        "totalEquipos": 202,
+        "totalPenaltisAFavor": 629,
+        "promedioPenaltis": 3.11
+      },
+      "Bulgaria": {
+        "totalEquipos": 216,
+        "totalPenaltisAFavor": 649,
+        "promedioPenaltis": 3
+      },
+      "Rumanía": {
+        "totalEquipos": 344,
+        "totalPenaltisAFavor": 1362,
+        "promedioPenaltis": 3.96
+      },
+      "Azerbaijan": {
+        "totalEquipos": 124,
+        "totalPenaltisAFavor": 343,
+        "promedioPenaltis": 2.77
+      },
+      "Hungría": {
+        "totalEquipos": 272,
+        "totalPenaltisAFavor": 1425,
+        "promedioPenaltis": 5.24
+      },
+      "Polonia": {
+        "totalEquipos": 336,
+        "totalPenaltisAFavor": 1357,
+        "promedioPenaltis": 4.04
+      },
+      "Eslovenia": {
+        "totalEquipos": 227,
+        "totalPenaltisAFavor": 650,
+        "promedioPenaltis": 2.86
+      },
+      "Eslovaquia": {
+        "totalEquipos": 224,
+        "totalPenaltisAFavor": 669,
+        "promedioPenaltis": 2.99
+      },
+      "Luxemburgo": {
+        "totalEquipos": 280,
+        "totalPenaltisAFavor": 958,
+        "promedioPenaltis": 3.42
+      },
+      "Bosnia": {
+        "totalEquipos": 212,
+        "totalPenaltisAFavor": 596,
+        "promedioPenaltis": 2.81
+      },
+      "Macedonia": {
+        "totalEquipos": 154,
+        "totalPenaltisAFavor": 540,
+        "promedioPenaltis": 3.51
+      },
+      "Armenia": {
+        "totalEquipos": 109,
+        "totalPenaltisAFavor": 319,
+        "promedioPenaltis": 2.93
+      },
+      "Albania": {
+        "totalEquipos": 154,
+        "totalPenaltisAFavor": 608,
+        "promedioPenaltis": 3.95
+      },
+      "Irlanda del Norte": {
+        "totalEquipos": 168,
+        "totalPenaltisAFavor": 727,
+        "promedioPenaltis": 4.33
+      },
+      "Moldavia": {
+        "totalEquipos": 118,
+        "totalPenaltisAFavor": 345,
+        "promedioPenaltis": 2.92
+      },
+      "Malta": {
+        "totalEquipos": 196,
+        "totalPenaltisAFavor": 781,
+        "promedioPenaltis": 3.98
+      },
+      "Kosovo": {
+        "totalEquipos": 66,
+        "totalPenaltisAFavor": 198,
+        "promedioPenaltis": 3
+      },
+      "Gibraltar": {
+        "totalEquipos": 85,
+        "totalPenaltisAFavor": 175,
+        "promedioPenaltis": 2.06
+      },
+      "Montenegro": {
+        "totalEquipos": 156,
+        "totalPenaltisAFavor": 485,
+        "promedioPenaltis": 3.11
+      },
+      "Gales": {
+        "totalEquipos": 156,
+        "totalPenaltisAFavor": 456,
+        "promedioPenaltis": 2.92
+      },
+      "Andorra": {
+        "totalEquipos": 64,
+        "totalPenaltisAFavor": 120,
+        "promedioPenaltis": 1.88
+      },
+      "San Marino": {
+        "totalEquipos": 195,
+        "totalPenaltisAFavor": 358,
+        "promedioPenaltis": 1.84
+      },
+      "Noruega": {
+        "totalEquipos": 350,
+        "totalPenaltisAFavor": 1317,
+        "promedioPenaltis": 3.76
+      },
+      "Suecia": {
+        "totalEquipos": 352,
+        "totalPenaltisAFavor": 753,
+        "promedioPenaltis": 2.14
+      },
+      "Kazajistan": {
+        "totalEquipos": 161,
+        "totalPenaltisAFavor": 508,
+        "promedioPenaltis": 3.16
+      },
+      "Bielorrusia": {
+        "totalEquipos": 289,
+        "totalPenaltisAFavor": 885,
+        "promedioPenaltis": 3.06
+      },
+      "Lituania": {
+        "totalEquipos": 155,
+        "totalPenaltisAFavor": 555,
+        "promedioPenaltis": 3.58
+      },
+      "Rep Irlanda": {
+        "totalEquipos": 219,
+        "totalPenaltisAFavor": 803,
+        "promedioPenaltis": 3.67
+      },
+      "Letonia": {
+        "totalEquipos": 152,
+        "totalPenaltisAFavor": 597,
+        "promedioPenaltis": 3.93
+      },
+      "Georgia": {
+        "totalEquipos": 149,
+        "totalPenaltisAFavor": 508,
+        "promedioPenaltis": 3.41
+      },
+      "Finlandia": {
+        "totalEquipos": 313,
+        "totalPenaltisAFavor": 817,
+        "promedioPenaltis": 2.61
+      },
+      "Islas Feroe": {
+        "totalEquipos": 130,
+        "totalPenaltisAFavor": 398,
+        "promedioPenaltis": 3.06
+      },
+      "Islandia": {
+        "totalEquipos": 280,
+        "totalPenaltisAFavor": 683,
+        "promedioPenaltis": 2.44
+      },
+      "Estonia": {
+        "totalEquipos": 236,
+        "totalPenaltisAFavor": 1062,
+        "promedioPenaltis": 4.5
+      },
+      "": {
+        "totalEquipos": 13123,
+        "totalPenaltisAFavor": null,
+        "promedioPenaltis": null
+      }
+    },
+    "topEquiposPenaltis": [
+      {
+        "equipo": "AC Milan",
+        "pais": "Italia",
+        "temporada": 2021,
+        "penaltisAFavor": 20,
+        "penaltisEnContra": 5,
+        "saldo": 15
+      },
+      {
+        "equipo": "Levadia",
+        "pais": "Estonia",
+        "temporada": 2019,
+        "penaltisAFavor": 20,
+        "penaltisEnContra": 3,
+        "saldo": 17
+      },
+      {
+        "equipo": "FC Barcelona",
+        "pais": "España",
+        "temporada": 2016,
+        "penaltisAFavor": 19,
+        "penaltisEnContra": 1,
+        "saldo": 18
+      },
+      {
+        "equipo": "SS Lazio",
+        "pais": "Italia",
+        "temporada": 2020,
+        "penaltisAFavor": 18,
+        "penaltisEnContra": 9,
+        "saldo": 9
+      },
+      {
+        "equipo": "AC Milan",
+        "pais": "Italia",
+        "temporada": 1951,
+        "penaltisAFavor": 18,
+        "penaltisEnContra": 11,
+        "saldo": 7
+      },
+      {
+        "equipo": "Estrella Roja",
+        "pais": "Serbia",
+        "temporada": 2019,
+        "penaltisAFavor": 17,
+        "penaltisEnContra": 2,
+        "saldo": 15
+      },
+      {
+        "equipo": "FC Oporto",
+        "pais": "Portugal",
+        "temporada": 2021,
+        "penaltisAFavor": 16,
+        "penaltisEnContra": 4,
+        "saldo": 12
+      },
+      {
+        "equipo": "Galatasaray SK",
+        "pais": "Turquía",
+        "temporada": 2021,
+        "penaltisAFavor": 16,
+        "penaltisEnContra": 8,
+        "saldo": 8
+      },
+      {
+        "equipo": "Genoa CFC",
+        "pais": "Italia",
+        "temporada": 2020,
+        "penaltisAFavor": 16,
+        "penaltisEnContra": 9,
+        "saldo": 7
+      },
+      {
+        "equipo": "Panathinaikos",
+        "pais": "Grecia",
+        "temporada": 2020,
+        "penaltisAFavor": 16,
+        "penaltisEnContra": 2,
+        "saldo": 14
+      },
+      {
+        "equipo": "Estrella Roja",
+        "pais": "Serbia",
+        "temporada": 2018,
+        "penaltisAFavor": 16,
+        "penaltisEnContra": 2,
+        "saldo": 14
+      },
+      {
+        "equipo": "Shkendija Tetovo",
+        "pais": "Macedonia",
+        "temporada": 2018,
+        "penaltisAFavor": 16,
+        "penaltisEnContra": 5,
+        "saldo": 11
+      },
+      {
+        "equipo": "Budapest Honved",
+        "pais": "Hungría",
+        "temporada": 2012,
+        "penaltisAFavor": 16,
+        "penaltisEnContra": 2,
+        "saldo": 14
+      },
+      {
+        "equipo": "MTK Budapest",
+        "pais": "Hungría",
+        "temporada": 2006,
+        "penaltisAFavor": 16,
+        "penaltisEnContra": 8,
+        "saldo": 8
+      },
+      {
+        "equipo": "Real Betis",
+        "pais": "España",
+        "temporada": 1987,
+        "penaltisAFavor": 16,
+        "penaltisEnContra": 9,
+        "saldo": 7
+      },
+      {
+        "equipo": "PAOK Salonica",
+        "pais": "Grecia",
+        "temporada": 2022,
+        "penaltisAFavor": 15,
+        "penaltisEnContra": 2,
+        "saldo": 13
+      },
+      {
+        "equipo": "AS Mónaco",
+        "pais": "Francia",
+        "temporada": 2021,
+        "penaltisAFavor": 15,
+        "penaltisEnContra": 5,
+        "saldo": 10
+      },
+      {
+        "equipo": "Estrella Roja",
+        "pais": "Serbia",
+        "temporada": 2021,
+        "penaltisAFavor": 15,
+        "penaltisEnContra": 4,
+        "saldo": 11
+      },
+      {
+        "equipo": "Levadia",
+        "pais": "Estonia",
+        "temporada": 2021,
+        "penaltisAFavor": 15,
+        "penaltisEnContra": 4,
+        "saldo": 11
+      },
+      {
+        "equipo": "Lecce",
+        "pais": "Italia",
+        "temporada": 2020,
+        "penaltisAFavor": 15,
+        "penaltisEnContra": 13,
+        "saldo": 2
+      }
+    ],
+    "topEquiposAmarillaas": [
+      {
+        "equipo": "RCD Espanyol",
+        "pais": "España",
+        "temporada": 2013,
+        "amarillasAlRival": 109,
+        "amarillasRecibidas": 150,
+        "total": 259
+      },
+      {
+        "equipo": "Valencia CF",
+        "pais": "España",
+        "temporada": 2022,
+        "amarillasAlRival": 130,
+        "amarillasRecibidas": 128,
+        "total": 258
+      },
+      {
+        "equipo": "CD Tenerife",
+        "pais": "España",
+        "temporada": 1996,
+        "amarillasAlRival": 132,
+        "amarillasRecibidas": 125,
+        "total": 257
+      },
+      {
+        "equipo": "Málaga CF",
+        "pais": "España",
+        "temporada": 2010,
+        "amarillasAlRival": 121,
+        "amarillasRecibidas": 135,
+        "total": 256
+      },
+      {
+        "equipo": "Getafe CF",
+        "pais": "España",
+        "temporada": 2020,
+        "amarillasAlRival": 120,
+        "amarillasRecibidas": 133,
+        "total": 253
+      },
+      {
+        "equipo": "Valencia CF",
+        "pais": "España",
+        "temporada": 1996,
+        "amarillasAlRival": 132,
+        "amarillasRecibidas": 118,
+        "total": 250
+      },
+      {
+        "equipo": "Real Betis",
+        "pais": "España",
+        "temporada": 1996,
+        "amarillasAlRival": 131,
+        "amarillasRecibidas": 119,
+        "total": 250
+      },
+      {
+        "equipo": "Granada CF",
+        "pais": "España",
+        "temporada": 2016,
+        "amarillasAlRival": 111,
+        "amarillasRecibidas": 138,
+        "total": 249
+      },
+      {
+        "equipo": "SV Mattersburg",
+        "pais": "Austria",
+        "temporada": 2007,
+        "amarillasAlRival": 137,
+        "amarillasRecibidas": 112,
+        "total": 249
+      },
+      {
+        "equipo": "Real Zaragoza",
+        "pais": "España",
+        "temporada": 2010,
+        "amarillasAlRival": 119,
+        "amarillasRecibidas": 128,
+        "total": 247
+      },
+      {
+        "equipo": "Real Zaragoza",
+        "pais": "España",
+        "temporada": 2013,
+        "amarillasAlRival": 116,
+        "amarillasRecibidas": 129,
+        "total": 245
+      },
+      {
+        "equipo": "Rayo Vallecano",
+        "pais": "España",
+        "temporada": 2013,
+        "amarillasAlRival": 105,
+        "amarillasRecibidas": 140,
+        "total": 245
+      },
+      {
+        "equipo": "Getafe CF",
+        "pais": "España",
+        "temporada": 2009,
+        "amarillasAlRival": 121,
+        "amarillasRecibidas": 123,
+        "total": 244
+      },
+      {
+        "equipo": "Levski Sofia",
+        "pais": "Bulgaria",
+        "temporada": 2014,
+        "amarillasAlRival": 119,
+        "amarillasRecibidas": 125,
+        "total": 244
+      },
+      {
+        "equipo": "Athletic Club",
+        "pais": "España",
+        "temporada": 2009,
+        "amarillasAlRival": 129,
+        "amarillasRecibidas": 114,
+        "total": 243
+      },
+      {
+        "equipo": "Sevilla FC",
+        "pais": "España",
+        "temporada": 2015,
+        "amarillasAlRival": 127,
+        "amarillasRecibidas": 116,
+        "total": 243
+      },
+      {
+        "equipo": "Atlético de Madrid",
+        "pais": "España",
+        "temporada": 2012,
+        "amarillasAlRival": 112,
+        "amarillasRecibidas": 131,
+        "total": 243
+      },
+      {
+        "equipo": "Sevilla FC",
+        "pais": "España",
+        "temporada": 2012,
+        "amarillasAlRival": 129,
+        "amarillasRecibidas": 114,
+        "total": 243
+      },
+      {
+        "equipo": "Sevilla FC",
+        "pais": "España",
+        "temporada": 2010,
+        "amarillasAlRival": 139,
+        "amarillasRecibidas": 103,
+        "total": 242
+      },
+      {
+        "equipo": "Valencia CF",
+        "pais": "España",
+        "temporada": 2012,
+        "amarillasAlRival": 116,
+        "amarillasRecibidas": 126,
+        "total": 242
+      }
+    ]
+  }
+}

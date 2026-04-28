@@ -8,6 +8,16 @@ const rutas = [
     componente: Inicio
   },
   {
+    ruta: '/penaltis-europa',
+    nombre: 'Análisis Europa',
+    componente: () => import('@/vistas/AnalizadorEuropa.vue')
+  },
+  {
+    ruta: '/penaltis',
+    nombre: 'Análisis de Penaltis',
+    componente: () => import('@/vistas/AnalizadorPenaltis.vue')
+  },
+  {
     ruta: '/acerca-de',
     nombre: 'Acerca de',
     componente: () => import('@/vistas/AcercaDe.vue')
@@ -16,11 +26,6 @@ const rutas = [
     ruta: '/contacto',
     nombre: 'Contacto',
     componente: () => import('@/vistas/Contacto.vue')
-  },
-  {
-    ruta: '/penaltis',
-    nombre: 'Análisis de Penaltis',
-    componente: () => import('@/vistas/AnalizadorPenaltis.vue')
   }
 ]
 
