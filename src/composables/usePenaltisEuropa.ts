@@ -1,58 +1,29 @@
-import { ref, computed, onMounted } from 'vue'
-import resumenDatos from '@/data/penaltis-europa-resumen.json'
+import { ref, computed } from 'vue'
+import datosEuropa from '@/data/penaltis-europa-final.json'
 
 export function usePenaltisEuropa() {
-  const equipos = ref<any[]>([])
-  const resumen = ref(resumenDatos.resumen)
-  const metadatos = ref(resumenDatos.metadatos)
-  const estaCargando = ref(false)
-
-  // Cargar todos los chunks de equipos
-  const cargarEquipos = async () => {
-    estaCargando.value = true
-    try {
-      const totalChunks = 31
-      let todosEquipos = []
-      
-      for (let i = 0; i < totalChunks; i++) {
-        const response = await import(`@/data/penaltis-europa-equipos-${i}.json`)
-        todosEquipos = [...todosEquipos, ...response.registros]
-      }
-      
-      equipos.value = todosEquipos
-    } catch (error) {
-      console.error('Error cargando equipos:', error)
-    } finally {
-      estaCargando.value = false
-    }
-  }
-
-  // Cargar datos al montar el composable
-  onMounted(() => {
-    cargarEquipos()
-  })
+  const equipos = ref(datosEuropa.equipos)
+  const metadatos = ref(datosEuropa.metadatos)
+  const resumen = ref(datosEuropa.resumen)
 
   // Filtros
-  const filtroTemporada = ref(metadatos.value.temporadas[metadatos.value.temporadas.length - 1])
+  const filtroTemporada = ref('Todos')
   const filtroPais = ref('Todos')
   const ordenar = ref('penaltis')
 
-  // Obtener años únicos
+  // Obtener temporadas
   const temporadas = computed(() => {
-    const anos = ['Todos', ...metadatos.value.temporadas.filter(t => !isNaN(t))]
-    return anos.sort((a, b) => {
-      if (a === 'Todos') return 1
-      if (b === 'Todos') return -1
-      return b - a
-    })
+    const anos = metadatos.value.temporadas.filter(t => !isNaN(t)).sort((a, b) => b - a)
+    return ['Todos', ...anos]
   })
 
-  // Obtener países únicos
+  // Obtener países
   const paises = computed(() => {
-    return ['Todos', ...metadatos.value.paises]
+    const paisUnicos = [...new Set(equipos.value.map(e => e.nombrePais))].sort()
+    return ['Todos', ...paisUnicos]
   })
 
-  // Filtrar equipos
+  // Equipos filtrados
   const equiposFiltrados = computed(() => {
     let resultado = equipos.value
 
@@ -70,121 +41,118 @@ export function usePenaltisEuropa() {
     } else if (ordenar.value === 'saldo') {
       resultado = resultado.sort((a, b) => b.penaltis.saldo - a.penaltis.saldo)
     } else if (ordenar.value === 'amarillas') {
-      const getTotalAmarillas = (e) => e.tarjetas.amarillasAlRival + e.tarjetas.amarillasRecibidas
-      resultado = resultado.sort((a, b) => getTotalAmarillas(b) - getTotalAmarillas(a))
-    } else if (ordenar.value === 'equipo') {
-      resultado = resultado.sort((a, b) => a.equipo.localeCompare(b.equipo))
+      resultado = resultado.sort((a, b) => 
+        (b.tarjetas.amarillasAlRival + b.tarjetas.amarillasRecibidas) - 
+        (a.tarjetas.amarillasAlRival + a.tarjetas.amarillasRecibidas)
+      )
     }
 
-    return resultado.slice(0, 500)
+    return resultado.slice(0, 100)
   })
 
-  // Estadísticas de los filtrados
-  const estadisticasFiltrados = computed(() => {
+  // Estadísticas
+  const estadisticas = computed(() => {
     const filtrados = equiposFiltrados.value
     return {
-      total: filtrados.length,
+      totalEquipos: filtrados.length,
       totalPenaltisAFavor: filtrados.reduce((sum, e) => sum + e.penaltis.aFavor, 0),
       totalPenaltisEnContra: filtrados.reduce((sum, e) => sum + e.penaltis.enContra, 0),
+      promedioPenaltis: filtrados.length > 0
+        ? Math.round((filtrados.reduce((sum, e) => sum + e.penaltis.aFavor, 0) / filtrados.length) * 10) / 10
+        : 0,
       totalAmarillas: filtrados.reduce((sum, e) => 
         sum + e.tarjetas.amarillasAlRival + e.tarjetas.amarillasRecibidas, 0),
       totalRojas: filtrados.reduce((sum, e) => 
-        sum + e.tarjetas.rojasAlRival + e.tarjetas.rojasRecibidas, 0),
-      promedioPenaltis: filtrados.length > 0 
-        ? Math.round((filtrados.reduce((sum, e) => sum + e.penaltis.aFavor, 0) / filtrados.length) * 100) / 100 
-        : 0
+        sum + e.tarjetas.rojasAlRival + e.tarjetas.rojasRecibidas, 0)
     }
   })
 
-  // Datos para gráfica: Top países por penaltis
-  const datosGraficaPaisesBarras = computed(() => {
-    const paisDatos = resumen.value.porPais
-    const paises = Object.keys(paisDatos)
-      .sort((a, b) => paisDatos[b].totalPenaltisAFavor - paisDatos[a].totalPenaltisAFavor)
-      .slice(0, 15)
-
-    return {
-      labels: paises,
-      datasets: [
-        {
-          label: 'Total Penaltis a Favor',
-          data: paises.map(p => paisDatos[p].totalPenaltisAFavor),
-          backgroundColor: '#3b82f6',
-          borderColor: '#1d4ed8',
-          borderWidth: 1
-        },
-        {
-          label: 'Promedio por Equipo',
-          data: paises.map(p => paisDatos[p].promedioPenaltis),
-          backgroundColor: '#f59e0b',
-          borderColor: '#d97706',
-          borderWidth: 1,
-          yAxisID: 'y1'
-        }
-      ]
-    }
+  // Top 10 equipos por penaltis
+  const top10Penaltis = computed(() => {
+    return equiposFiltrados.value.slice(0, 10)
   })
 
-  // Datos para gráfica: Temporadas
-  const datosGraficaTemporadas = computed(() => {
-    const temporadaDatos = resumen.value.porTemporada
-    const anos = Object.keys(temporadaDatos)
-      .map(Number)
-      .filter(a => !isNaN(a))
-      .sort()
-      .slice(-30)
+  // Datos para gráfica de distribución de penaltis
+  const datosGraficaDistribucion = computed(() => {
+    const labels = top10Penaltis.value.map(e => e.equipo.substring(0, 15))
+    const aFavor = top10Penaltis.value.map(e => e.penaltis.aFavor)
+    const enContra = top10Penaltis.value.map(e => e.penaltis.enContra)
 
     return {
-      labels: anos,
+      labels,
       datasets: [
         {
           label: 'Penaltis a Favor',
-          data: anos.map(a => temporadaDatos[a].totalPenaltisAFavor),
-          borderColor: '#22c55e',
-          backgroundColor: 'rgba(34, 197, 94, 0.1)',
-          borderWidth: 2,
-          tension: 0.4,
-          fill: true
+          data: aFavor,
+          backgroundColor: '#22c55e',
+          borderColor: '#16a34a',
+          borderWidth: 1
         },
         {
           label: 'Penaltis en Contra',
-          data: anos.map(a => temporadaDatos[a].totalPenaltisEnContra),
-          borderColor: '#ef4444',
-          backgroundColor: 'rgba(239, 68, 68, 0.1)',
-          borderWidth: 2,
-          tension: 0.4,
-          fill: false
+          data: enContra,
+          backgroundColor: '#ef4444',
+          borderColor: '#dc2626',
+          borderWidth: 1
         }
       ]
     }
   })
 
-  // Top equipos de todos los tiempos
-  const topEquiposHistorico = computed(() => {
-    return resumen.value.topEquiposPenaltis.slice(0, 10)
+  // Datos para gráfica de saldo de penaltis
+  const datosGraficaSaldo = computed(() => {
+    const top5 = equiposFiltrados.value.slice(0, 5)
+    return {
+      labels: top5.map(e => e.equipo.substring(0, 12)),
+      datasets: [
+        {
+          label: 'Saldo Penaltis',
+          data: top5.map(e => e.penaltis.saldo),
+          backgroundColor: top5.map(e => e.penaltis.saldo > 0 ? '#3b82f6' : '#f59e0b'),
+          borderColor: '#1e293b',
+          borderWidth: 1
+        }
+      ]
+    }
   })
 
-  // Top equipos por tarjetas
-  const topEquiposTarjetas = computed(() => {
-    return resumen.value.topEquiposAmarillaas.slice(0, 10)
+  // Distribución por país
+  const distribucionPaises = computed(() => {
+    const pais = {}
+    equiposFiltrados.value.forEach(e => {
+      if (!pais[e.nombrePais]) {
+        pais[e.nombrePais] = { cantidad: 0, penaltis: 0, amarillas: 0 }
+      }
+      pais[e.nombrePais].cantidad++
+      pais[e.nombrePais].penaltis += e.penaltis.aFavor
+      pais[e.nombrePais].amarillas += e.tarjetas.amarillasAlRival + e.tarjetas.amarillasRecibidas
+    })
+
+    return Object.entries(pais)
+      .map(([nombre, datos]) => ({
+        pais: nombre,
+        cantidad: datos.cantidad,
+        penaltis: datos.penaltis,
+        promedioPenaltis: Math.round((datos.penaltis / datos.cantidad) * 10) / 10,
+        amarillas: datos.amarillas
+      }))
+      .sort((a, b) => b.penaltis - a.penaltis)
   })
 
   return {
     equipos,
     equiposFiltrados,
-    resumen,
     metadatos,
-    estadisticasFiltrados,
+    resumen,
     temporadas,
     paises,
     filtroTemporada,
     filtroPais,
     ordenar,
-    datosGraficaPaisesBarras,
-    datosGraficaTemporadas,
-    topEquiposHistorico,
-    topEquiposTarjetas,
-    estaCargando,
-    cargarEquipos
+    estadisticas,
+    top10Penaltis,
+    datosGraficaDistribucion,
+    datosGraficaSaldo,
+    distribucionPaises
   }
 }
